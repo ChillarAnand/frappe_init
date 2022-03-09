@@ -9,11 +9,10 @@ from frappe.desk.page.setup_wizard.setup_wizard import make_records
 
 def fetch_records():
 	json_file = '/tmp/records.json'
-	if not os.path.exists(json_file):
-		json_url = 'https://raw.githubusercontent.com/ChillarAnand/frappe_init/main/records.json'
-		response = requests.get(json_url)
-		with open(json_file, 'w') as fh:
-			fh.write(response.text)
+	json_url = 'https://raw.githubusercontent.com/ChillarAnand/frappe_init/main/records.json'
+	response = requests.get(json_url)
+	with open(json_file, 'w') as fh:
+		fh.write(response.text)
 
 	records = json.loads(open(json_file).read())
 	return records
