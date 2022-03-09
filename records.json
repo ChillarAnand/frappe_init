@@ -341,6 +341,7 @@
   {
     "doctype": "User",
     "email": "devi@g.c",
+    "first_name": "devi shetty",
     "user_type": "System User",
     "roles": [
       {
@@ -349,13 +350,14 @@
         "parent": "devi@g.c",
         "parentfield": "roles",
         "parenttype": "User",
-        "role": "Doctor"
+        "role": "Physician"
       }
     ]
   },
   {
     "doctype": "User",
     "email": "aswini@g.c",
+    "first_name": "aswini",
     "user_type": "System User",
     "roles": [
       {
