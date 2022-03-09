@@ -15,13 +15,16 @@ This repo has 3 files.
 3. init.py - This script is used to load bootstrap data on a remote site.
 
 
-#### Bench console usage
+#### Quick start
+
+Paste this in a bench console
 
 ```py
 import requests
 
-json_url = 'https://raw.githubusercontent.com/ChillarAnand/frappe_init/main/records.json'
-response = requests.get(json_url)
-records = response.json()
-
+script_url = 'https://raw.githubusercontent.com/ChillarAnand/frappe_init/main/ipython.py'
+response = requests.get(script_url)
+with open('/tmp/ipython.py', 'w') as fh:
+	fh.write(response.text)
+%run /tmp/ipython.py
 ```

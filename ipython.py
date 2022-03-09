@@ -7,7 +7,7 @@ from erpnext.setup.setup_wizard.utils import complete
 from frappe.desk.page.setup_wizard.setup_wizard import make_records
 
 
-def fetch_records()
+def fetch_records():
 	json_file = '/tmp/records.json'
 	if not os.path.exists(json_file):
 		json_url = 'https://raw.githubusercontent.com/ChillarAnand/frappe_init/main/records.json'
