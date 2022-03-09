@@ -13,7 +13,7 @@ def fetch_records():
 		json_url = 'https://raw.githubusercontent.com/ChillarAnand/frappe_init/main/records.json'
 		response = requests.get(json_url)
 		with open(json_file, 'w') as fh:
-			fh.write(response.content)
+			fh.write(response.text)
 
 	records = json.loads(open(json_file).read())
 	return records
