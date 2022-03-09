@@ -42,6 +42,13 @@
     "date_of_joining": "2000-01-01"
   },
   {
+    "doctype": "Employee",
+    "first_name": "Ms. Aswini",
+    "gender": "Female",
+    "date_of_birth": "1992-01-01",
+    "date_of_joining": "2000-01-01"
+  },
+  {
     "doctype": "Fiscal Year",
     "year": "2021-2022",
     "year_end_date": "2022-03-31",
@@ -328,6 +335,36 @@
         "parentfield": "roles",
         "parenttype": "User",
         "role": "System Manager"
+      }
+    ]
+  },
+  {
+    "doctype": "User",
+    "email": "devi@g.c",
+    "user_type": "System User",
+    "roles": [
+      {
+        "docstatus": 0,
+        "doctype": "Has Role",
+        "parent": "devi@g.c",
+        "parentfield": "roles",
+        "parenttype": "User",
+        "role": "Doctor"
+      }
+    ]
+  },
+  {
+    "doctype": "User",
+    "email": "aswini@g.c",
+    "user_type": "System User",
+    "roles": [
+      {
+        "docstatus": 0,
+        "doctype": "Has Role",
+        "parent": "aswini@g.c",
+        "parentfield": "roles",
+        "parenttype": "User",
+        "role": "Nursing User"
       }
     ]
   }
