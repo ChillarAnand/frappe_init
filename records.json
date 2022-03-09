@@ -36,12 +36,10 @@
   },
   {
     "doctype": "Employee",
-    "name": "Dr. Devi Shetty",
     "first_name": "Dr. Devi Shetty",
     "gender": "Male",
     "date_of_birth": "1992-01-01",
-    "date_of_joining": "2000-01-01",
-    "leave_approver": "dummy@user.com"
+    "date_of_joining": "2000-01-01"
   },
   {
     "doctype": "Fiscal Year",
