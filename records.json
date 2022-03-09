@@ -1,0 +1,336 @@
+[
+  {
+    "doctype": "Company",
+    "company_name": "Frappe",
+    "default_currency": "INR"
+  },
+  {
+    "doctype": "Customer",
+    "customer_group": "All Customer Groups",
+    "customer_type": "Company",
+    "customer_name": "Narayana Health",
+    "territory": "India"
+  },
+  {
+    "doctype": "Customer",
+    "customer_name": "Dummy customer",
+    "customer_group": "All Customer Groups",
+    "territory": "India"
+  },
+  {
+    "doctype": "Donor Type",
+    "donor_type": "Regular"
+  },
+  {
+    "doctype": "Donor",
+    "donor_name": "Donor",
+    "donor_type": "Regular",
+    "email": "donor@f.f"
+  },
+  {
+    "doctype": "Employee",
+    "first_name": "dummy employee",
+    "gender": "Male",
+    "date_of_birth": "2022-02-14",
+    "date_of_joining": "2022-02-16"
+  },
+  {
+    "doctype": "Employee",
+    "name": "Dr. Devi Shetty",
+    "first_name": "Dr. Devi Shetty",
+    "gender": "Male",
+    "date_of_birth": "1992-01-01",
+    "date_of_joining": "2000-01-01",
+    "leave_approver": "dummy@user.com"
+  },
+  {
+    "doctype": "Fiscal Year",
+    "year": "2021-2022",
+    "year_end_date": "2022-03-31",
+    "year_start_date": "2021-04-01"
+  },
+  {
+    "doctype": "Healthcare Practitioner",
+    "first_name": "Dr. Devi Shetty",
+    "department": "Cardiology"
+  },
+  {
+    "doctype": "Healthcare Service Unit Type",
+    "service_unit_type": "OPD Room",
+    "allow_appointments": 1
+  },
+  {
+    "doctype": "Healthcare Service Unit Type",
+    "service_unit_type": "Operation Theater",
+    "inpatient_occupancy": 1
+  },
+  {
+    "doctype": "Healthcare Service Unit",
+    "healthcare_service_unit_name": "OPD - Cardio",
+    "service_unit_type": "OPD Room",
+    "company": "AvilPage"
+  },
+  {
+    "doctype": "Healthcare Service Unit",
+    "healthcare_service_unit_name": "OT - Cardio",
+    "service_unit_type": "Operation Theater",
+    "company": "AvilPage"
+  },
+  {
+    "doctype": "Holiday List",
+    "holiday_list_name": "weekends",
+    "from_date": "2021-04-01",
+    "to_date": "2022-03-31",
+    "total_holidays": 1,
+    "holidays": [
+      {
+        "doctype": "Holiday",
+        "docstatus": 0,
+        "idx": 1,
+        "holiday_date": "2022-03-06",
+        "weekly_off": 0,
+        "description": "sunday",
+        "parent": "weekends",
+        "parentfield": "holidays",
+        "parenttype": "Holiday List"
+      }
+    ]
+  },
+  {
+    "doctype": "Item",
+    "name": "Apple MacBook Air",
+    "item_code": "Apple MacBook Air",
+    "item_name": "Apple MacBook Air",
+    "item_group": "Consumable",
+    "stock_uom": "Nos",
+    "is_stock_item": 1,
+    "standard_rate": 112000,
+    "description": "Apple MacBook Air",
+    "default_material_request_type": "Purchase"
+  },
+  {
+    "doctype": "Item",
+    "item_name": "Complete Blood Count",
+    "item_code": "Complete Blood Count",
+    "item_group": "Services",
+    "stock_uom": "Nos",
+    "standard_rate": 200,
+    "description": "Lab test - Complete Blood Count"
+  },
+  {
+    "doctype": "Membership Type",
+    "membership_type": "Regular",
+    "amount": 100
+  },
+  {
+    "doctype": "Member",
+    "member_name": "Mehta",
+    "membership_type": "Regular",
+    "pan_number": "BKTPP1234A"
+  },
+  {
+    "doctype": "Patient",
+    "first_name": "Buddu",
+    "sex": "Male",
+    "email": "buddu@example.com",
+    "mobile": "+91 0000000009",
+    "invite_user": 0
+  },
+  {
+    "doctype": "Patient Appointment",
+    "patient": "Buddu",
+    "status": "Closed",
+    "practitioner": "HLC-PRAC-2021-00001",
+    "department": "Cardiology",
+    "service_unit": "OPD - Cardio - A",
+    "duration": 15,
+    "appointment_date": "2020-01-01",
+    "appointment_time": "09:00:00",
+    "invoiced": 0,
+    "paid_amount": 0,
+    "reminded": 0
+  },
+  {
+    "doctype": "Payment Entry",
+    "payment_type": "Receive",
+    "posting_date": "2022-02-17",
+    "mode_of_payment": "Cash",
+    "party_type": "Donor",
+    "party": "donor@f.f",
+    "paid_from": "Debtors - FT",
+    "paid_from_account_type": "Receivable",
+    "paid_from_account_currency": "INR",
+    "paid_to": "Cash - FT",
+    "paid_to_account_type": "Cash",
+    "paid_to_account_currency": "INR",
+    "paid_amount": 123,
+    "received_amount": 123,
+    "status": "Submitted"
+  },
+  {
+    "doctype": "Gender",
+    "gender": "Male"
+  },
+  {
+    "doctype": "Healthcare Activity",
+    "name": "BP Check",
+    "activity": "BP Check",
+    "activity_duration": 600
+  },
+  {
+    "doctype": "Nursing Checklist Template",
+    "name": "Discharge checklist",
+    "title": "Discharge checklist",
+    "tasks": [
+      {
+        "doctype": "Nursing Checklist Template Task",
+        "activity": "BP Check",
+        "task_duration": 600,
+        "parent": "Discharge checklist",
+        "parentfield": "tasks",
+        "parenttype": "Nursing Checklist Template"
+      }
+    ]
+  },
+  {
+    "doctype": "Lab Test Template",
+    "item": "Complete Blood Count",
+    "name": "Complete Blood Count",
+    "lab_test_name": "Complete Blood Count",
+    "lab_test_code": "Complete Blood Count",
+    "lab_test_group": "Services",
+    "lab_test_template_type": "Compound",
+    "is_billable": 1,
+    "lab_test_rate": 200,
+    "lab_test_description": "Complete Blood Count",
+    "department": "Haematology",
+    "sample": "Blood Sample",
+    "sample_uom": "U/ml",
+    "sample_qty": 10,
+    "normal_test_templates": [
+      {
+        "idx": 1,
+        "lab_test_event": "WBC (White Blood Cells)",
+        "lab_test_uom": "K/ul",
+        "normal_range": "4.5 - 11.5",
+        "parent": "Complete Blood Count",
+        "parentfield": "normal_test_templates",
+        "parenttype": "Lab Test Template",
+        "doctype": "Normal Test Template"
+      },
+      {
+        "idx": 2,
+        "lab_test_event": "RBC (Red Blood Cells)",
+        "lab_test_uom": "M/uL",
+        "normal_range": "4 - 5.4",
+        "parent": "Complete Blood Count",
+        "parentfield": "normal_test_templates",
+        "parenttype": "Lab Test Template",
+        "doctype": "Normal Test Template"
+      },
+      {
+        "idx": 3,
+        "lab_test_event": "Hemoglobin",
+        "lab_test_uom": "g/dL",
+        "normal_range": "12 - 15",
+        "parent": "Complete Blood Count",
+        "parentfield": "normal_test_templates",
+        "parenttype": "Lab Test Template",
+        "doctype": "Normal Test Template"
+      },
+      {
+        "idx": 4,
+        "lab_test_event": "Platelets",
+        "lab_test_uom": "K/ul",
+        "normal_range": "150 - 540",
+        "parent": "Complete Blood Count",
+        "parentfield": "normal_test_templates",
+        "parenttype": "Lab Test Template",
+        "doctype": "Normal Test Template"
+      }
+    ]
+  },
+  {
+    "doctype": "Lab Test UOM",
+    "lab_test_uom": "K/ul"
+  },
+  {
+    "doctype": "Lab Test UOM",
+    "lab_test_uom": "g/dL"
+  },
+  {
+    "doctype": "Lab Test UOM",
+    "lab_test_uom": "M/uL"
+  },
+  {
+    "doctype": "Nursing Checklist Template",
+    "title": "Admission checklist",
+    "tasks": [
+      {
+        "idx": 1,
+        "activity": "BP Check",
+        "mandatory": 1,
+        "task_duration": 600,
+        "parent": "Admission checklist",
+        "parentfield": "tasks",
+        "parenttype": "Nursing Checklist Template",
+        "doctype": "Nursing Checklist Template Task"
+      }
+    ]
+  },
+  {
+    "doctype": "Salary Structure",
+    "name": "Monthly Salary",
+    "docstatus": 1,
+    "payroll_frequency": "Monthly",
+    "currency": "INR",
+    "earnings": [
+      {
+        "salary_component": "Basic",
+        "abbr": "B",
+        "amount": 10000,
+        "parent": "SS2",
+        "parentfield": "earnings",
+        "parenttype": "Salary Structure",
+        "doctype": "Salary Detail"
+      },
+      {
+        "salary_component": "House Rent Allowance",
+        "abbr": "HRA",
+        "amount": 5000,
+        "parent": "SS2",
+        "parentfield": "earnings",
+        "parenttype": "Salary Structure",
+        "doctype": "Salary Detail"
+      }
+    ],
+    "deductions": [
+      {
+        "salary_component": "Income Tax",
+        "abbr": "IT",
+        "amount_based_on_formula": 1,
+        "formula": ".2*(B+HRA)",
+        "parent": "SS2",
+        "parentfield": "deductions",
+        "parenttype": "Salary Structure",
+        "doctype": "Salary Detail"
+      }
+    ]
+  },
+  {
+    "doctype": "User",
+    "email": "dummy@user.com",
+    "first_name": "dummy user",
+    "user_type": "System User",
+    "roles": [
+      {
+        "docstatus": 0,
+        "doctype": "Has Role",
+        "parent": "dummy@user.com",
+        "parentfield": "roles",
+        "parenttype": "User",
+        "role": "System Manager"
+      }
+    ]
+  }
+]
