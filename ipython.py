@@ -1,4 +1,5 @@
 import json
+import sys
 
 import frappe
 import requests
@@ -7,11 +8,14 @@ from frappe.desk.page.setup_wizard.setup_wizard import make_records
 
 
 def fetch_records():
-	json_file = '/tmp/records.json'
-	json_url = 'https://raw.githubusercontent.com/ChillarAnand/frappe_init/main/records.json'
-	response = requests.get(json_url)
-	with open(json_file, 'w') as fh:
-		fh.write(response.text)
+	try:
+		json_file = sys.argv[1]
+	except:
+		json_file = '/tmp/records.json'
+		json_url = 'https://raw.githubusercontent.com/ChillarAnand/frappe_init/main/records.json'
+		response = requests.get(json_url)
+		with open(json_file, 'w') as fh:
+			fh.write(response.text)
 
 	records = json.loads(open(json_file).read())
 	return records
@@ -47,8 +51,9 @@ hr_settings.save()
 
 
 holiday_list = frappe.get_doc('Holiday List', 'weekends')
-company = frappe.get_doc('Company', 'AvilPage')
-company.default_holiday_list = holiday_list.name
+
+# company = frappe.get_doc('Company', 'AvilPage')
+# company.default_holiday_list = holiday_list.name
 # company.default_currency = "INR"
 # company.save()
 
