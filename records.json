@@ -28,6 +28,10 @@
     "email": "donor@f.f"
   },
   {
+    "doctype": "Dosage Form",
+    "dosage_form": "Ear Gel"
+  },
+  {
     "doctype": "Employee",
     "first_name": "dummy employee",
     "gender": "Male",
@@ -55,6 +59,20 @@
     "year_start_date": "2021-04-01"
   },
   {
+    "doctype": "Gender",
+    "gender": "Male"
+  },
+  {
+    "doctype": "Gender",
+    "gender": "Female"
+  },
+  {
+    "doctype": "Healthcare Activity",
+    "name": "BP Check",
+    "activity": "BP Check",
+    "activity_duration": 600
+  },
+  {
     "doctype": "Healthcare Practitioner",
     "first_name": "Dr. Devi Shetty",
     "department": "Cardiology"
@@ -73,13 +91,13 @@
     "doctype": "Healthcare Service Unit",
     "healthcare_service_unit_name": "OPD - Cardio",
     "service_unit_type": "OPD Room",
-    "company": "AvilPage"
+    "company": "Frappe"
   },
   {
     "doctype": "Healthcare Service Unit",
     "healthcare_service_unit_name": "OT - Cardio",
     "service_unit_type": "Operation Theater",
-    "company": "AvilPage"
+    "company": "Frappe"
   },
   {
     "doctype": "Holiday List",
@@ -147,7 +165,7 @@
     "status": "Closed",
     "practitioner": "HLC-PRAC-2021-00001",
     "department": "Cardiology",
-    "service_unit": "OPD - Cardio - A",
+    "service_unit": "OPD - Cardio - F",
     "duration": 15,
     "appointment_date": "2020-01-01",
     "appointment_time": "09:00:00",
@@ -173,14 +191,12 @@
     "status": "Submitted"
   },
   {
-    "doctype": "Gender",
-    "gender": "Male"
-  },
-  {
-    "doctype": "Healthcare Activity",
-    "name": "BP Check",
-    "activity": "BP Check",
-    "activity_duration": 600
+    "doctype": "Shift Type",
+    "name": "Morning Shift",
+    "start_time": "9:00:00",
+    "end_time": "12:00:00",
+    "holiday_list": "weekends",
+    "enable_auto_attendance": 1
   },
   {
     "doctype": "Nursing Checklist Template",
