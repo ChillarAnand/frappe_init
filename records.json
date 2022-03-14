@@ -385,5 +385,11 @@
         "role": "Nursing User"
       }
     ]
+  },
+  {
+    "doctype": "Note",
+    "title": "Dummy",
+    "public": 1,
+    "content": "<div class=\"ql-editor read-mode\"><p>Dummy content</p></div>"
   }
 ]
