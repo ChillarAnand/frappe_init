@@ -3,8 +3,15 @@ import sys
 
 import frappe
 import requests
-from erpnext.setup.setup_wizard.utils import complete
+# from erpnext.setup.setup_wizard.utils import complete
+from frappe.utils.install import complete_setup_wizard
+from frappe.desk.page.setup_wizard.setup_wizard import setup_complete
 from frappe.desk.page.setup_wizard.setup_wizard import make_records
+
+
+print('Setup Wizard')
+# setup_complete()
+complete_setup_wizard()
 
 
 def fetch_records():
@@ -37,8 +44,6 @@ def create_records(records):
 			# print('Failed ' + str(e))
 
 
-print('Setup Wizard')
-complete()
 
 records = fetch_records()
 create_records(records)
