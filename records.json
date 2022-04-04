@@ -9,13 +9,13 @@
     "customer_group": "All Customer Groups",
     "customer_type": "Company",
     "customer_name": "Narayana Health",
-    "territory": "India"
+    "territory": "All Territories"
   },
   {
     "doctype": "Customer",
     "customer_name": "Dummy customer",
     "customer_group": "All Customer Groups",
-    "territory": "India"
+    "territory": "All Territories"
   },
   {
     "doctype": "Donor Type",
@@ -28,18 +28,44 @@
     "email": "donor@f.f"
   },
   {
+    "doctype": "Gender",
+    "gender": "Male"
+  },
+  {
+    "doctype": "Gender",
+    "gender": "Female"
+  },
+  {
     "doctype": "Dosage Form",
     "dosage_form": "Ear Gel"
   },
   {
     "doctype": "Employee",
+    "company": "Frappe",
     "first_name": "dummy employee",
     "gender": "Male",
     "date_of_birth": "2022-02-14",
     "date_of_joining": "2022-02-16"
   },
   {
+    "doctype": "User",
+    "email": "dummy@user.com",
+    "first_name": "dummy user",
+    "user_type": "System User",
+    "roles": [
+      {
+        "docstatus": 0,
+        "doctype": "Has Role",
+        "parent": "dummy@user.com",
+        "parentfield": "roles",
+        "parenttype": "User",
+        "role": "System Manager"
+      }
+    ]
+  },
+  {
     "doctype": "Employee",
+    "company": "Frappe",
     "first_name": "Dr. Devi Shetty",
     "gender": "Male",
     "date_of_birth": "1992-01-01",
@@ -48,6 +74,7 @@
   },
   {
     "doctype": "Employee",
+    "company": "Frappe",
     "first_name": "Ms. Aswini",
     "gender": "Female",
     "date_of_birth": "1992-01-01",
@@ -56,6 +83,7 @@
   },
   {
     "doctype": "Employee",
+    "company": "Frappe",
     "first_name": "Ms. Shalini",
     "gender": "Female",
     "date_of_birth": "1992-01-01",
@@ -67,14 +95,6 @@
     "year": "2021-2022",
     "year_end_date": "2022-03-31",
     "year_start_date": "2021-04-01"
-  },
-  {
-    "doctype": "Gender",
-    "gender": "Male"
-  },
-  {
-    "doctype": "Gender",
-    "gender": "Female"
   },
   {
     "doctype": "Healthcare Activity",
@@ -118,26 +138,6 @@
     "healthcare_service_unit_name": "OT - Cardio",
     "service_unit_type": "Operation Theater",
     "company": "Frappe"
-  },
-  {
-    "doctype": "Holiday List",
-    "holiday_list_name": "weekends",
-    "from_date": "2021-04-01",
-    "to_date": "2022-03-31",
-    "total_holidays": 1,
-    "holidays": [
-      {
-        "doctype": "Holiday",
-        "docstatus": 0,
-        "idx": 1,
-        "holiday_date": "2022-03-06",
-        "weekly_off": 0,
-        "description": "sunday",
-        "parent": "weekends",
-        "parentfield": "holidays",
-        "parenttype": "Holiday List"
-      }
-    ]
   },
   {
     "doctype": "Item",
@@ -209,6 +209,26 @@
     "paid_amount": 123,
     "received_amount": 123,
     "status": "Submitted"
+  },
+  {
+    "doctype": "Holiday List",
+    "holiday_list_name": "weekends",
+    "from_date": "2021-04-01",
+    "to_date": "2022-03-31",
+    "total_holidays": 1,
+    "holidays": [
+      {
+        "doctype": "Holiday",
+        "docstatus": 0,
+        "idx": 1,
+        "holiday_date": "2022-03-06",
+        "weekly_off": 0,
+        "description": "sunday",
+        "parent": "weekends",
+        "parentfield": "holidays",
+        "parenttype": "Holiday List"
+      }
+    ]
   },
   {
     "doctype": "Shift Type",
@@ -392,22 +412,6 @@
   },
   {
     "doctype": "User",
-    "email": "dummy@user.com",
-    "first_name": "dummy user",
-    "user_type": "System User",
-    "roles": [
-      {
-        "docstatus": 0,
-        "doctype": "Has Role",
-        "parent": "dummy@user.com",
-        "parentfield": "roles",
-        "parenttype": "User",
-        "role": "System Manager"
-      }
-    ]
-  },
-  {
-    "doctype": "User",
     "email": "devi@g.c",
     "first_name": "devi shetty",
     "user_type": "System User",
@@ -445,13 +449,24 @@
     "content": "<div class=\"ql-editor read-mode\"><p>Dummy content</p></div>"
   },
   {
+    "doctype": "Leave Allocation",
+    "company": "Frappe",
     "docstatus": 1,
     "leave_type": "Casual Leave",
     "from_date": "2022-01-01",
     "to_date": "2022-12-31",
     "new_leaves_allocated": 20,
     "total_leaves_allocated": 20,
-    "employee": "HR-EMP-00001",
-    "doctype": "Leave Allocation"
+    "employee": "HR-EMP-00001"
+  },
+  {
+    "name": "Frappe",
+    "docstatus": 0,
+    "letter_head_name": "Frappe",
+    "source": "HTML",
+    "is_default": 1,
+    "align": "Left",
+    "content": "<img src=\"https://frappe.io/files/frappe-logo-type.png\" style=\"width: 100px;\">",
+    "doctype": "Letter Head"
   }
 ]
