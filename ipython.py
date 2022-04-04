@@ -30,6 +30,7 @@ def fetch_records():
 
 def create_records(records):
 	for record in records:
+		frappe.db.commit()
 		try:
 			exists = frappe.db.exists(record)
 			if not exists:
@@ -41,6 +42,7 @@ def create_records(records):
 		except Exception as e:
 			print('Failed ' + record['doctype'])
 			print(str(e))
+			frappe.db.rollback()
 			# print('Failed ' + str(e))
 
 
