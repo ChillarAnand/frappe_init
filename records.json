@@ -18,14 +18,25 @@
     "territory": "All Territories"
   },
   {
-    "doctype": "Donor Type",
-    "donor_type": "Regular"
-  },
-  {
-    "doctype": "Donor",
-    "donor_name": "Donor",
-    "donor_type": "Regular",
-    "email": "donor@f.f"
+    "doctype": "Holiday List",
+    "name": "weekends",
+    "holiday_list_name": "weekends",
+    "from_date": "2021-04-01",
+    "to_date": "2022-03-31",
+    "total_holidays": 1,
+    "holidays": [
+      {
+        "doctype": "Holiday",
+        "docstatus": 0,
+        "idx": 1,
+        "holiday_date": "2022-03-06",
+        "weekly_off": 0,
+        "description": "sunday",
+        "parent": "weekends",
+        "parentfield": "holidays",
+        "parenttype": "Holiday List"
+      }
+    ]
   },
   {
     "doctype": "Gender",
@@ -146,12 +157,18 @@
     "company": "Frappe"
   },
   {
+    "doctype": "UOM",
+    "name": "Nos",
+    "enabled": 1,
+    "uom_name": "Nos"
+  },
+  {
     "doctype": "Item",
     "name": "Apple MacBook Air",
     "item_code": "Apple MacBook Air",
     "item_name": "Apple MacBook Air",
     "item_group": "Consumable",
-    "stock_uom": "Nos",
+    "stock_uom": "",
     "is_stock_item": 1,
     "standard_rate": 112000,
     "description": "Apple MacBook Air",
@@ -215,26 +232,6 @@
     "paid_amount": 123,
     "received_amount": 123,
     "status": "Submitted"
-  },
-  {
-    "doctype": "Holiday List",
-    "holiday_list_name": "weekends",
-    "from_date": "2021-04-01",
-    "to_date": "2022-03-31",
-    "total_holidays": 1,
-    "holidays": [
-      {
-        "doctype": "Holiday",
-        "docstatus": 0,
-        "idx": 1,
-        "holiday_date": "2022-03-06",
-        "weekly_off": 0,
-        "description": "sunday",
-        "parent": "weekends",
-        "parentfield": "holidays",
-        "parenttype": "Holiday List"
-      }
-    ]
   },
   {
     "doctype": "Shift Type",
