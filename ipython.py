@@ -40,9 +40,9 @@ def create_records(records):
 			else:
 				print('Skipping ' + record['doctype'])
 		except Exception as e:
+			frappe.db.rollback()
 			print('Failed ' + record['doctype'])
 			print(str(e))
-			frappe.db.rollback()
 			# print('Failed ' + str(e))
 
 

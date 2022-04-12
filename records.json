@@ -40,6 +40,12 @@
     "dosage_form": "Ear Gel"
   },
   {
+    "doctype": "User",
+    "email": "dummy@user.com",
+    "first_name": "dummy user",
+    "user_type": "System User"
+  },
+  {
     "doctype": "Employee",
     "company": "Frappe",
     "first_name": "dummy employee",
