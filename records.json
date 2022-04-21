@@ -471,5 +471,13 @@
     "align": "Left",
     "content": "<img src=\"https://frappe.io/files/frappe-logo-type.png\" style=\"width: 100px;\">",
     "doctype": "Letter Head"
+  },
+  {
+    "doctype": "ABDM Integration",
+    "gateway_name": "ABDM",
+    "default": 1,
+    "company": "Frappe",
+    "auth_base_url": "https://dev.abdm.gov.in/gateway/",
+    "health_id_base_url": "https://healthidsbx.abdm.gov.in/api/"
   }
 ]

@@ -55,8 +55,7 @@ hr_settings.standard_working_hours = 2
 hr_settings.save()
 
 
-holiday_list = frappe.get_doc('Holiday List', 'weekends')
-
+# holiday_list = frappe.get_doc('Holiday List', 'weekends')
 # company = frappe.get_doc('Company', 'AvilPage')
 # company.default_holiday_list = holiday_list.name
 # company.default_currency = "INR"
