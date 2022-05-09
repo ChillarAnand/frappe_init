@@ -109,9 +109,9 @@
   },
   {
     "doctype": "Fiscal Year",
-    "year": "2021-2022",
-    "year_end_date": "2022-03-31",
-    "year_start_date": "2021-04-01"
+    "year": "2022-2023",
+    "year_end_date": "2023-03-31",
+    "year_start_date": "2022-04-01"
   },
   {
     "doctype": "Healthcare Activity",

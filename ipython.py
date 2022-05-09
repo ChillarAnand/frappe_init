@@ -1,3 +1,4 @@
+import datetime
 import json
 import sys
 
@@ -9,6 +10,22 @@ from frappe.desk.page.setup_wizard.setup_wizard import make_records
 
 print('Setup Wizard')
 complete_setup_wizard()
+
+now = datetime.datetime.now()
+year = now.year
+
+fy = frappe.get_doc(
+    {
+        "doctype": "Fiscal Year",
+        "year": f"{year}-{year+1}",
+        "year_end_date": f"{year+1}-03-31",
+        "year_start_date": f"{year}-04-01",
+    }
+)
+try:
+    fy.save()
+except:
+    pass
 
 
 def fetch_records():
