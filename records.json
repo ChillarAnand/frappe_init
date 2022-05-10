@@ -51,6 +51,11 @@
     "dosage_form": "Ear Gel"
   },
   {
+    "doctype": "Party Type",
+    "party_type": "Customer",
+    "account_type": "Receivable"
+  },
+  {
     "doctype": "User",
     "email": "dummy@user.com",
     "first_name": "dummy user",
@@ -168,7 +173,7 @@
     "item_code": "Apple MacBook Air",
     "item_name": "Apple MacBook Air",
     "item_group": "Consumable",
-    "stock_uom": "",
+    "stock_uom": "Nos",
     "is_stock_item": 1,
     "standard_rate": 112000,
     "description": "Apple MacBook Air",
@@ -205,6 +210,7 @@
   {
     "doctype": "Patient Appointment",
     "patient": "Buddu",
+    "company": "Frappe",
     "status": "Closed",
     "practitioner": "HLC-PRAC-2021-00001",
     "department": "Cardiology",
@@ -218,11 +224,12 @@
   },
   {
     "doctype": "Payment Entry",
+    "company": "Frappe",
     "payment_type": "Receive",
     "posting_date": "2022-02-17",
     "mode_of_payment": "Cash",
-    "party_type": "Donor",
-    "party": "donor@f.f",
+    "party_type": "Customer",
+    "party": "Dummy customer",
     "paid_from": "Debtors - FT",
     "paid_from_account_type": "Receivable",
     "paid_from_account_currency": "INR",
@@ -231,7 +238,9 @@
     "paid_to_account_currency": "INR",
     "paid_amount": 123,
     "received_amount": 123,
-    "status": "Submitted"
+    "status": "Submitted",
+    "source_exchange_rate": 1,
+    "target_exchange_rate": 1
   },
   {
     "doctype": "Shift Type",
@@ -379,6 +388,7 @@
     "name": "Monthly Salary",
     "docstatus": 1,
     "payroll_frequency": "Monthly",
+    "company": "Frappe",
     "currency": "INR",
     "earnings": [
       {
