@@ -44,6 +44,10 @@ def fetch_records():
 
 def create_records(records):
     for record in records:
+        if not frappe.db.exists('DocType' , record['doctype']):
+            print(f"Skipping {record['doctype']}")
+            continue
+
         frappe.db.commit()
         try:
             if record.get('name'):
@@ -55,7 +59,7 @@ def create_records(records):
                 make_records([record])
                 frappe.db.commit()
             else:
-                print('Skipping ' + record['doctype'])
+                print('Exists ' + record['doctype'])
         except Exception as e:
             frappe.db.rollback()
             print('Failed ' + record['doctype'])
