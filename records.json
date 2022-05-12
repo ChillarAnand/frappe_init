@@ -70,6 +70,30 @@
     "date_of_joining": "2022-02-16"
   },
   {
+    "doctype": "Lab Test UOM",
+    "lab_test_uom": "U/ml"
+  },
+  {
+    "doctype": "Lab Test UOM",
+    "lab_test_uom": "K/ul"
+  },
+  {
+    "doctype": "Lab Test UOM",
+    "lab_test_uom": "g/dL"
+  },
+  {
+    "doctype": "UOM",
+    "uom_name": "U/ml"
+  },
+  {
+    "doctype": "UOM",
+    "uom_name": "K/ul"
+  },
+  {
+    "doctype": "UOM",
+    "uom_name": "g/dL"
+  },
+  {
     "doctype": "User",
     "email": "dummy@user.com",
     "first_name": "dummy user",
@@ -316,7 +340,6 @@
       {
         "idx": 1,
         "lab_test_event": "WBC (White Blood Cells)",
-        "lab_test_uom": "K/ul",
         "normal_range": "4.5 - 11.5",
         "parent": "Complete Blood Count",
         "parentfield": "normal_test_templates",
@@ -326,7 +349,6 @@
       {
         "idx": 2,
         "lab_test_event": "RBC (Red Blood Cells)",
-        "lab_test_uom": "M/uL",
         "normal_range": "4 - 5.4",
         "parent": "Complete Blood Count",
         "parentfield": "normal_test_templates",
@@ -336,7 +358,6 @@
       {
         "idx": 3,
         "lab_test_event": "Hemoglobin",
-        "lab_test_uom": "g/dL",
         "normal_range": "12 - 15",
         "parent": "Complete Blood Count",
         "parentfield": "normal_test_templates",
@@ -346,7 +367,6 @@
       {
         "idx": 4,
         "lab_test_event": "Platelets",
-        "lab_test_uom": "K/ul",
         "normal_range": "150 - 540",
         "parent": "Complete Blood Count",
         "parentfield": "normal_test_templates",
