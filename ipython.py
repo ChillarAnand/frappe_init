@@ -59,7 +59,7 @@ def create_records(records):
                 make_records([record])
                 frappe.db.commit()
             else:
-                print('Exists ' + record['doctype'])
+                print(f"{record['doctype']}     Exists")
         except Exception as e:
             frappe.db.rollback()
             print('Failed ' + record['doctype'])

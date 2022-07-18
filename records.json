@@ -62,6 +62,12 @@
     "user_type": "System User"
   },
   {
+    "doctype": "User",
+    "email": "doctor@f.f",
+    "first_name": "doctor user",
+    "user_type": "System User"
+  },
+  {
     "doctype": "Employee",
     "company": "Frappe",
     "first_name": "dummy employee",
@@ -445,14 +451,14 @@
   },
   {
     "doctype": "User",
-    "email": "devi@g.c",
-    "first_name": "devi shetty",
+    "email": "doctor@f.f",
+    "first_name": "doctor devi shetty",
     "user_type": "System User",
     "roles": [
       {
         "docstatus": 0,
         "doctype": "Has Role",
-        "parent": "devi@g.c",
+        "parent": "doctor@f.f",
         "parentfield": "roles",
         "parenttype": "User",
         "role": "Physician"
