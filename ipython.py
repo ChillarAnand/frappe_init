@@ -44,7 +44,7 @@ def fetch_records():
 
 def create_records(records):
     for record in records:
-        if not frappe.db.exists('DocType' , record['doctype']):
+        if not frappe.db.exists('DocType', record['doctype']):
             print(f"Skipping {record['doctype']}")
             continue
 
@@ -55,7 +55,7 @@ def create_records(records):
             else:
                 exists = frappe.db.exists(record)
             if not exists:
-                print('Creating ' + record['doctype'])
+                print(f"{record['doctype']}     Creating")
                 make_records([record])
                 frappe.db.commit()
             else:
@@ -68,6 +68,27 @@ def create_records(records):
 
 records = fetch_records()
 create_records(records)
+
+
+# finish onboarding
+modules = frappe.get_all('Module Onboarding', fields=['name'])
+for module in modules:
+    module_doc = frappe.get_doc('Module Onboarding', module.name)
+    if not module_doc.check_completion():
+        steps = module_doc.get_steps()
+        for step in steps:
+            step.is_complete = True
+            step.save()
+
+
+# set password for all users
+frappe.flags.in_test = True
+
+users = frappe.get_all('User', pluck='name')
+for user in users:
+    user = frappe.get_doc('User', user)
+    user.new_password = 'p'
+    user.save()
 
 
 # settings
