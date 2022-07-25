@@ -1,3 +1,4 @@
+import copy
 import datetime
 import json
 import sys
@@ -44,23 +45,28 @@ def fetch_records():
 
 def create_records(records):
     for record in records:
-        if not frappe.db.exists('DocType', record['doctype']):
-            print(f"Skipping {record['doctype']}")
-            continue
+        print(f"Processing {record['doctype']}")
 
         frappe.db.commit()
         try:
             if record.get('name'):
                 exists = frappe.db.exists(record['doctype'], record['name'])
             else:
-                exists = frappe.db.exists(record)
+                _record = {}
+                for key, value in record.items():
+                    if not isinstance(value, str):
+                        continue
+                    _record[key] = value
+
+                exists = frappe.db.exists(_record)
+
             if not exists:
                 print(f"{record['doctype']}     Creating")
                 make_records([record])
                 frappe.db.commit()
             else:
                 print(f"{record['doctype']}     Exists")
-        except Exception as e:
+        except ImportError as e:
             frappe.db.rollback()
             print('Failed ' + record['doctype'])
             print(str(e))
