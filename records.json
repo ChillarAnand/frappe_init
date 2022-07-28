@@ -18,6 +18,18 @@
     "territory": "All Territories"
   },
   {
+    "doctype": "Item Group",
+    "item_group_name": "Consumable",
+    "parent_item_group": "All Item Groups",
+    "is_group": "Yes"
+  },
+  {
+    "doctype": "Item Group",
+    "item_group_name": "Services",
+    "parent_item_group": "All Item Groups",
+    "is_group": "Yes"
+  },
+  {
     "doctype": "Holiday List",
     "name": "weekends",
     "holiday_list_name": "weekends",
@@ -150,9 +162,32 @@
   },
   {
     "doctype": "Healthcare Activity",
-    "name": "BP Check",
     "activity": "BP Check",
     "activity_duration": 600
+  },
+  {
+    "doctype": "Healthcare Activity",
+    "activity": "CBC Report"
+  },
+  {
+    "doctype": "Healthcare Activity",
+    "activity": "ECG Check"
+  },
+  {
+    "doctype": "Healthcare Activity",
+    "activity": "BMI Check"
+  },
+  {
+    "doctype": "Healthcare Activity",
+    "activity": "Vitals Check"
+  },
+  {
+    "doctype": "Healthcare Activity",
+    "activity": "X-Ray"
+  },
+  {
+    "doctype": "Healthcare Activity",
+    "activity": "Sample Collection"
   },
   {
     "doctype": "Healthcare Practitioner",
