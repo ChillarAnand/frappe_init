@@ -61,6 +61,7 @@ def create_records(records):
 
             if not exists:
                 print(f"{record['doctype']}     Creating")
+                print(record)
                 make_records([record])
                 frappe.db.commit()
             else:
